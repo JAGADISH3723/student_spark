@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idea Sharing Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    .navbar {
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar img {
+      height: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .idea-box, .solution-box {
+      margin-bottom: 20px;
+    }
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .idea {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .idea h3 {
+      margin: 0 0 10px;
+    }
+    .comment {
+      margin-left: 20px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div>
+      <img src=" c:\Users\hydrocks\Dropbox\My PC (LAPTOP-S3MNFCEC)\Downloads\th (1).jpg" alt="Logo">
+      <span style="font-size: 20px; margin-left: 10px;">Student Spark</span>
+    </div>
+    <div>
+      <button onclick="alert('Profile Coming Soon!')">Profile</button>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Post an Idea -->
+    <div class="idea-box">
+      <h2>Share Your Idea</h2>
+      <textarea id="ideaInput" placeholder="Write your idea here..."></textarea>
+      <button onclick="postIdea()">Post Idea</button>
+    </div>
+
+    <!-- Ideas Feed -->
+    <div id="ideasFeed">
+      <h2>Ideas</h2>
+      <!-- Ideas will appear here dynamically -->
+    </div>
+  </div>
+
+  <script>
+    const ideas = [];
+
+    function postIdea() {
+      const ideaText = document.getElementById('ideaInput').value.trim();
+      if (ideaText === '') {
+        alert('Please enter an idea!');
+        return;
+      }
+      const idea = { text: ideaText, comments: [] };
+      ideas.push(idea);
+      renderIdeas();
+      document.getElementById('ideaInput').value = '';
+    }
+
+    function postComment(ideaIndex) {
+      const commentInput = document.getElementById(`commentInput-${ideaIndex}`);
+      const commentText = commentInput.value.trim();
+      if (commentText === '') {
+        alert('Please enter a comment!');
+        return;
+      }
+      ideas[ideaIndex].comments.push(commentText);
+      renderIdeas();
+    }
+
+    function renderIdeas() {
+      const ideasFeed = document.getElementById('ideasFeed');
+      ideasFeed.innerHTML = '';
+      ideas.forEach((idea, index) => {
+        const ideaDiv = document.createElement('div');
+        ideaDiv.classList.add('idea');
+        ideaDiv.innerHTML = `
+          <h3>${idea.text}</h3>
+          <div>
+            <input type="text" id="commentInput-${index}" placeholder="Write a solution...">
+            <button onclick="postComment(${index})">Post Solution</button>
+          </div>
+          ${idea.comments.map(comment => `<div class="comment">- ${comment}</div>`).join('')}
+        `;
+        ideasFeed.appendChild(ideaDiv);
+      });
+    }
+    
+  </script>
+</body>
+</html>
