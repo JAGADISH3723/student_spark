@@ -1,142 +1,73 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idea Sharing Platform</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-    .navbar {
-      background: #007bff;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar img {
-      height: 40px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .idea-box, .solution-box {
-      margin-bottom: 20px;
-    }
-    textarea, input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      padding: 10px 15px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-    .idea {
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-    }
-    .idea h3 {
-      margin: 0 0 10px;
-    }
-    .comment {
-      margin-left: 20px;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-  </style>
+  <title>Student Spark</title>
+  <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <div>
-      <img src=" c:\Users\hydrocks\Dropbox\My PC (LAPTOP-S3MNFCEC)\Downloads\th (1).jpg" alt="Logo">
-      <span style="font-size: 20px; margin-left: 10px;">Student Spark</span>
-    </div>
-    <div>
-      <button onclick="alert('Profile Coming Soon!')">Profile</button>
-    </div>
+    <div class="logo">Student Spark</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
   </div>
 
-  <!-- Main Container -->
-  <div class="container">
-    <!-- Post an Idea -->
-    <div class="idea-box">
-      <h2>Share Your Idea</h2>
-      <textarea id="ideaInput" placeholder="Write your idea here..."></textarea>
-      <button onclick="postIdea()">Post Idea</button>
-    </div>
+  <!-- Welcome Section -->
+  <section id="home" class="welcome">
+    <h1>Welcome to Student Spark</h1>
+    <p>Time to shine on different ideas and collaborate with others.</p>
+  </section>
 
-    <!-- Ideas Feed -->
-    <div id="ideasFeed">
-      <h2>Ideas</h2>
-      <!-- Ideas will appear here dynamically -->
+  <!-- Services/Benefits Section -->
+  <section id="services" class="services">
+    <div class="service-card" onclick="navigateToPage('collaborate.html')">
+      <h3><a href="idea-sharing.html" style="text-decoration: none; color: inherit;">Post Your Ideas</a></h3>
+      <p>Share your innovative ideas and seek input from others.</p>
     </div>
+    <div class="service-card" onclick="navigateToPage('collaborate.html')">
+    <h3><a href="  Collaborate.html" style="text-decoration: none; color: inherit;"> Collaborate<a href="Explore-sol.html" style="text-decoration: none; color: inherit;"></a></h3>
+    <p>Work together to bring your ideas to life.</p>
   </div>
-
-  <script>
-    const ideas = [];
-
-    function postIdea() {
-      const ideaText = document.getElementById('ideaInput').value.trim();
-      if (ideaText === '') {
-        alert('Please enter an idea!');
-        return;
-      }
-      const idea = { text: ideaText, comments: [] };
-      ideas.push(idea);
-      renderIdeas();
-      document.getElementById('ideaInput').value = '';
-    }
-
-    function postComment(ideaIndex) {
-      const commentInput = document.getElementById(`commentInput-${ideaIndex}`);
-      const commentText = commentInput.value.trim();
-      if (commentText === '') {
-        alert('Please enter a comment!');
-        return;
-      }
-      ideas[ideaIndex].comments.push(commentText);
-      renderIdeas();
-    }
-
-    function renderIdeas() {
-      const ideasFeed = document.getElementById('ideasFeed');
-      ideasFeed.innerHTML = '';
-      ideas.forEach((idea, index) => {
-        const ideaDiv = document.createElement('div');
-        ideaDiv.classList.add('idea');
-        ideaDiv.innerHTML = `
-          <h3>${idea.text}</h3>
-          <div>
-            <input type="text" id="commentInput-${index}" placeholder="Write a solution...">
-            <button onclick="postComment(${index})">Post Solution</button>
-          </div>
-          ${idea.comments.map(comment => `<div class="comment">- ${comment}</div>`).join('')}
-        `;
-        ideasFeed.appendChild(ideaDiv);
-      });
-    }
+    <div class="service-card" onclick="navigateToPage(' Explore-sol.html')">
+      <h3><a href="Explore-sol.html" style="text-decoration: none; color: inherit;">Explore Solutions</a></h3>
+      <p>Discover unique solutions for challenges faced by peers.</p>
+    </div>
+  </section>
+  <div class="service-card">
     
-  </script>
+  
+
+  <!-- Team Section -->
+  <section id="team" class="team">
+    <h2>Our Team</h2>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/100" alt="Team Member">
+      <h4>John Doe</h4>
+      <p>Founder</p>
+    </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/100" alt="Team Member">
+      <h4>Jane Smith</h4>
+      <p>Co-Founder</p>
+    </div>
+    <div class="team-member">
+      <img src="https://via.placeholder.com/100" alt="Team Member">
+      <h4>Emma Brown</h4>
+      <p>Developer</p>
+    </div>
+    <p>Be a Part of Student Spark</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Student Spark. All rights reserved. <a href="#home">Back to top</a></p>
+  </footer>
 </body>
 </html>
