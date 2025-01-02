@@ -1,0 +1,181 @@
+ 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d89ef;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.navbar ul li a:hover {
+  color: #ffd700;
+}
+
+/* Welcome Section */
+.welcome {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.welcome h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.welcome p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Services/Benefits Section */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #eef2f3;
+}
+
+.services .service-card {
+  width: 30%;
+  background: #fff;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.services .service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2d89ef;
+}
+
+.services .service-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Team Section */
+.team {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.team .team-member {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.team .team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team .team-member h4 {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.team .team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background-color: #2d89ef;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+ 
+  .services .service-card {
+    width: 30%;
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .services .service-card:hover {
+    transform: scale(1.05); /* Expands the card */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+    background-color: #eef7ff; /* Slight background highlight */
+  }
+
+  .services .service-card h3,
+  .services .service-card p {
+    transition: color 0.3s ease;
+  }
+
+  .services .service-card:hover h3 {
+    color: #0056b3; /* Change text color on hover */
+  }
+
+  .services .service-card:hover p {
+    color: #333; /* Slightly darker text for description */
+  }
+ 
