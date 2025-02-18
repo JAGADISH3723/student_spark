@@ -1,4 +1,4 @@
- 
+  
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -54,7 +54,7 @@ body {
 
 .welcome h1 {
   font-size: 36px;
-  color: #333;
+  color:#2A3B4D;
 }
 
 .welcome p {
@@ -70,6 +70,25 @@ body {
   justify-content: space-around;
   padding: 50px 20px;
   background-color: #eef2f3;
+}
+/* Best Button Styling */
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Eye-catching gradient */
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(255, 126, 95, 0.4);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(255, 126, 95, 0.6);
 }
 
 .services .service-card {
@@ -178,4 +197,32 @@ body {
   .services .service-card:hover p {
     color: #333; /* Slightly darker text for description */
   }
- 
+  .why-we-stand-out .stand-out-container,
+  .services .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .stand-out-card,
+  .service-card {
+    flex: 1;
+    min-width: 300px; /* Adjust as needed */
+    text-align: center;
+  }
+  
+  .stand-out-card img,
+  .service-card img {
+    width: 100px; /* Adjust size */
+    height: auto;
+  }
+  .welcome{
+    background-image: url('https://files.oaiusercontent.com/file-VE64ZuCdwjKbEoMJRT1uAW?se=2025-02-18T10%3A27%3A11Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Db21cdbec-9e7c-4310-9cd1-4b93c86a44f4.webp&sig=mIp/RwFsiX0HuasD52i5H0WwyatS2d0wb5pgRlFPGKM%3D'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+    color: white; /* Adjust text color for visibility */
+  }
+    
