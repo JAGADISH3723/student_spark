@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <div class="navbar">
+  <div class="navbar"> 
     <div class="logo">Student Spark</div>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -20,46 +20,83 @@
   </div>
 
   <!-- Welcome Section -->
-  <section id="home" class="welcome">
+  <section  id="home" class="welcome">
     <h1>Welcome to Student Spark</h1>
     <p>Time to shine on different ideas and collaborate with others.</p>
   </section>
 
   <!-- Services/Benefits Section -->
   <section id="services" class="services">
-    <div class="service-card" onclick="navigateToPage('collaborate.html')">
-      <h3><a href="idea-sharing.html" style="text-decoration: none; color: inherit;">Post Your Ideas</a></h3>
-      <p>Share your innovative ideas and seek input from others.</p>
-    </div>
-    <div class="service-card" onclick="navigateToPage('collaborate.html')">
-    <h3><a href="  Collaborate.html" style="text-decoration: none; color: inherit;"> Collaborate<a href="Explore-sol.html" style="text-decoration: none; color: inherit;"></a></h3>
-    <p>Work together to bring your ideas to life.</p>
-  </div>
-    <div class="service-card" onclick="navigateToPage(' Explore-sol.html')">
-      <h3><a href="Explore-sol.html" style="text-decoration: none; color: inherit;">Explore Solutions</a></h3>
-      <p>Discover unique solutions for challenges faced by peers.</p>
+    <div class="service-card">
+      <h3>Share Your Innovative Ideas</h3>
+      <p>Post your ideas and get valuable input from others.</p>
+      <a href="idea-sharing.html" class="cta-button">Post Your Ideas</a>
     </div>
   </section>
-  <div class="service-card">
-    
+
   
+  
+  <section id="why-we-stand-out" class="services">
+    <h2>Why We Stand Out</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.ylCDZ79Map1rdFYfKQvbLgHaGu&pid=Api&P=0&h=220" alt="Innovative Problem-Solving">
+        <h3>Innovative Problem-Solving</h3>
+        <p>Student Spark connects students with real-world problems, offering them a platform to apply their knowledge and creativity to find innovative solutions. This unique approach enhances critical thinking and prepares students for future challenges.</p>
+      </div>
+      <div class="service-card">
+        <img src=" https://tse2.mm.bing.net/th?id=OIP.jvZb8DbzxJobd2OFTvlCRgHaEK&pid=Api&P=0&h=220" alt="Community and Collaboration">
+        <h3>Community and Collaboration</h3>
+        <p>Join a vibrant community of students and mentors dedicated to collaborative learning and problem-solving. Our platform fosters teamwork and networking, providing opportunities to engage with like-minded individuals and industry experts.</p>
+      </div>
+      <div class="service-card">
+        <img src=" https://tse2.mm.bing.net/th?id=OIP._IqHA44Q56IcGNYbkP-xdAHaHa&pid=Api&P=0&h=220" alt="User-Friendly and Secure Platform">
+        <h3>User-Friendly and Secure Platform</h3>
+        <p>Experience a modern, mobile-responsive website with intuitive navigation and vibrant design. Student Spark ensures a secure and scalable platform, allowing for seamless registration, problem submission, and solution exploration while safeguarding user information.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="services" class="services">
+    <h2>Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <img src=" " alt="Problem Posting">
+        <h3>Problem Posting</h3>
+        <p>Student Spark offers a streamlined platform for individuals and organizations to post real-world problems that require innovative solutions. Users can easily submit detailed descriptions, objectives, and requirements for their challenges. This service encourages collaboration by allowing problem posters to interact with a community of bright students eager to tackle new challenges.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.JwtV0CAUTbZJSzgW7LMEYgHaGN&pid=Api&P=0&h=220">
+        <h3>Solution Browsing</h3>
+        <p>Explore a diverse range of creative solutions offered by talented students from various fields. Our solution browsing service enables users to search and filter through an extensive database of submitted solutions, making it easy to find the perfect fit for their specific problem.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.1PcFNAqw_V4vAO22SlbBRAHaEu&pid=Api&P=0&h=220" alt="Community Engagement">
+        <h3>Community Engagement</h3>
+        <p>Join the Student Spark community to connect with like-minded individuals passionate about innovation and problem-solving. Our platform offers a collaborative forum where students, mentors, and industry experts can share insights, ask questions, and provide feedback.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
 
   <!-- Team Section -->
   <section id="team" class="team">
     <h2>Our Team</h2>
     <div class="team-member">
-      <img src="https://via.placeholder.com/100" alt="Team Member">
-      <h4>John Doe</h4>
+      <img src=" " alt="Team Member">
+      <h4>SHIVARAM</h4>
       <p>Founder</p>
     </div>
     <div class="team-member">
-      <img src="https://via.placeholder.com/100" alt="Team Member">
-      <h4>Jane Smith</h4>
+      <img src=" https://x.com/jaggu372323/photo" alt="Team Member">
+      <h4>SWETHA</h4>
       <p>Co-Founder</p>
     </div>
     <div class="team-member">
-      <img src="https://via.placeholder.com/100" alt="Team Member">
-      <h4>Emma Brown</h4>
+      <img src="c:\Users\hydrocks\Dropbox\My PC (LAPTOP-S3MNFCEC)\Downloads\WhatsApp Image 2025-02-16 at 13.55.02.jpeg" alt="Team Member">
+      <h4>JAGADISH</h4>
       <p>Developer</p>
     </div>
     <p>Be a Part of Student Spark</p>
@@ -70,4 +107,45 @@
     <p>&copy; 2024 Student Spark. All rights reserved. <a href="#home">Back to top</a></p>
   </footer>
 </body>
+<script>
+  // User Registration (Simple LocalStorage)
+function registerUser() {
+    const username = prompt("Enter your username:");
+    if (!username) return alert("Username is required!");
+    
+    localStorage.setItem("currentUser", username);
+    alert("Registration Successful!");
+    updateUI();
+}
+
+// Check if a user is logged in
+function checkLogin() {
+    return localStorage.getItem("currentUser");
+}
+
+// Update Navbar UI
+function updateUI() {
+    const user = checkLogin();
+    const profileButton = document.getElementById("profileBtn");
+
+    if (user) {
+        profileButton.innerText = `Welcome, ${user}`;
+        profileButton.onclick = logoutUser;
+    } else {
+        profileButton.innerText = "Login";
+        profileButton.onclick = registerUser;
+    }
+}
+
+// Logout User
+function logoutUser() {
+    localStorage.removeItem("currentUser");
+    alert("Logged out successfully!");
+    updateUI();
+}
+
+// Initialize UI on page load
+window.onload = updateUI;
+
+</script>
 </html>
