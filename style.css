@@ -49,7 +49,7 @@ body {
 .welcome {
   text-align: center;
   padding: 50px 20px;
-  background-color: #ffffff;
+  background-color: #dbcccc;
 }
 
 .welcome h1 {
@@ -217,12 +217,32 @@ body {
     width: 100px; /* Adjust size */
     height: auto;
   }
-  .welcome{
-    background-image: url('https://files.oaiusercontent.com/file-Xmn5Sg6KVsxkkPfEjFNagm?se=2025-03-01T04%3A23%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3DDALL%25C2%25B7E%25202025-02-18%252015.52.34%2520-%2520A%2520welcoming%2520background%2520image%2520for%2520a%2520platform%2520focused%2520on%2520sharing%2520innovative%2520ideas.%2520The%2520scene%2520features%2520a%2520glowing%2520light%2520bulb%2520symbolizing%2520creativity%252C%2520with.webp&sig=ROFe87fi7e8Xti0Xv2sREnTeJBsxS3TjIqYH5ucPKa4%3D'); /* Replace with your image path */
+  .welcome {
+    background: url(' https://res.cloudinary.com/dnhlil4g8/image/upload/v1741871879/gatizzqsaharjtyynvct.jpg') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 50px;
-    color: white; /* Adjust text color for visibility */
+    color: rgb(18, 1, 1); /* Adjust text color for visibility */
+  }
+    
+  .team .team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .login-btn {
+    background-color: white;
+    color: #2d89ef;
+    border: 1px solid #2d89ef;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #2d89ef;
+    color: white;
   }
     
