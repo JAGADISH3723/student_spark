@@ -9,22 +9,25 @@
 </head>
 <body>
   <!-- Navbar -->
-  <div class="navbar"> 
+   <div class="navbar"> 
     <div class="logo">Student Spark</div>
-    <ul>
+ <!-- Hamburger Menu Button -->
+    <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#team">Team</a></li>
     </ul>
+    <button id="profileBtn">Login</button> 
   </div>
-
+  </div>
+<div> 
   <!-- Welcome Section -->
   <section  id="home" class="welcome">
     <h1>Welcome to Student Spark</h1>
     <p>Time to shine on different ideas and collaborate with others.</p>
   </section>
-
+</div>
   <!-- Services/Benefits Section -->
   <section id="services" class="services">
     <div class="service-card">
@@ -79,23 +82,24 @@
   </section>
   
   
+  
 
 
   <!-- Team Section -->
   <section id="team" class="team">
     <h2>Our Team</h2>
     <div class="team-member">
-      <img src=" " alt="Team Member">
+      <img src="https://media-hyd1-2.cdn.whatsapp.net/v/t61.24694-24/473410992_1356677082003474_5743339502626131224_n.jpg?ccb=11-4&oh=01_Q5AaIYfIaQwD9uI_0ppc97R-VPD8G2lMxiUn1c3RLnCrwsue&oe=67DFC87B&_nc_sid=5e03e0&_nc_cat=109 " alt="Team Member">
       <h4>SHIVARAM</h4>
       <p>Founder</p>
     </div>
     <div class="team-member">
-      <img src=" https://x.com/jaggu372323/photo" alt="Team Member">
+      <img src="https://media-tir3-2.cdn.whatsapp.net/v/t61.24694-24/473403303_1048245977135646_5596457955006971827_n.jpg?ccb=11-4&oh=01_Q5AaIZl6arDWBt_eyUSLqLA2hL29zoY3hh3PyRl61OdPkfos&oe=67DFE6C7&_nc_sid=5e03e0&_nc_cat=100" alt="Team Member">
       <h4>SWETHA</h4>
       <p>Co-Founder</p>
     </div>
     <div class="team-member">
-      <img src="c:\Users\hydrocks\Dropbox\My PC (LAPTOP-S3MNFCEC)\Downloads\WhatsApp Image 2025-02-16 at 13.55.02.jpeg" alt="Team Member">
+      <img src="https://media-hyd1-2.cdn.whatsapp.net/v/t61.24694-24/473406663_3774464836197872_8241527737483922170_n.jpg?ccb=11-4&oh=01_Q5AaIcHOZCaR1DYrvMneKamR3VRWEPe53NmNopMl5BoW5_wL&oe=67DFD6F5&_nc_sid=5e03e0&_nc_cat=106" alt="Team Member">
       <h4>JAGADISH</h4>
       <p>Developer</p>
     </div>
@@ -109,6 +113,7 @@
 </body>
 <script>
   // User Registration (Simple LocalStorage)
+ // User Registration (Simple LocalStorage)
 function registerUser() {
     const username = prompt("Enter your username:");
     if (!username) return alert("Username is required!");
@@ -146,6 +151,7 @@ function logoutUser() {
 
 // Initialize UI on page load
 window.onload = updateUI;
+
 
 </script>
 </html>
